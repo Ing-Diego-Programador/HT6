@@ -6,6 +6,9 @@ public class Inventario {
     ArrayList SillonesDeMasaje = new ArrayList();
     ArrayList Bebidas = new ArrayList();
     ArrayList Condimentos = new ArrayList();  
+    ArrayList Frutas = new ArrayList();
+    ArrayList Carnes = new ArrayList();
+    ArrayList Lacteos = new ArrayList();
     
     public void Cargar() {
 
@@ -24,6 +27,20 @@ public class Inventario {
         Condimentos.add("Sirope de regaliz");
         Condimentos.add("Especies Cajun del chef");
         Condimentos.add("Mezcla Gumbo del chef");
-        
+        Frutas.add("Peras secas");
+        Frutas.add("Pasas");
+        Frutas.add("Manzana roja");
+        Frutas.add("Manzana verde");
+        Carnes.add("Res");
+        Carnes.add("Pollo");
+        Carnes.add("Cerdo");
+        Carnes.add("Camarones");
+        Carnes.add("Pescados");
+        Lacteos.add("Queso de cabra");
+        Lacteos.add("Queso Manchego");
+        Lacteos.add("Leche descremada");
+        Lacteos.add("Leche deslactosada");
+        Lacteos.add("Leche entera");
     }
 }
+
