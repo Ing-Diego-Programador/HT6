@@ -1,7 +1,11 @@
 import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Inventario {
-    
+
+    ArrayList producto = new ArrayList(); 
     ArrayList MuebleDeTerraza = new ArrayList(); 
     ArrayList SillonesDeMasaje = new ArrayList();
     ArrayList Bebidas = new ArrayList();
@@ -9,38 +13,65 @@ public class Inventario {
     ArrayList Frutas = new ArrayList();
     ArrayList Carnes = new ArrayList();
     ArrayList Lacteos = new ArrayList();
-    
-    public void Cargar() {
 
-        MuebleDeTerraza.add("Mesas de jardín");
-        MuebleDeTerraza.add("Sillas de jardín");
-        MuebleDeTerraza.add("Conjuntos mesas y sillas de jardín");
-        MuebleDeTerraza.add("Mesas de Ping Pong exteriores");
-        SillonesDeMasaje.add("Cojines y colchonetas de masaje");
-        SillonesDeMasaje.add("Sillones relax y sofás de masajes");
-        SillonesDeMasaje.add("Sillones de masajes avanzados");
-        SillonesDeMasaje.add("Sofás camas");
-        Bebidas.add("Cerveza tibetana Barley");
-        Bebidas.add("Té frios");
-        Bebidas.add("Coca cola 1 litro");
-        Bebidas.add("Coca cola 2 litros");
-        Condimentos.add("Sirope de regaliz");
-        Condimentos.add("Especies Cajun del chef");
-        Condimentos.add("Mezcla Gumbo del chef");
-        Frutas.add("Peras secas");
-        Frutas.add("Pasas");
-        Frutas.add("Manzana roja");
-        Frutas.add("Manzana verde");
-        Carnes.add("Res");
-        Carnes.add("Pollo");
-        Carnes.add("Cerdo");
-        Carnes.add("Camarones");
-        Carnes.add("Pescados");
-        Lacteos.add("Queso de cabra");
-        Lacteos.add("Queso Manchego");
-        Lacteos.add("Leche descremada");
-        Lacteos.add("Leche deslactosada");
-        Lacteos.add("Leche entera");
+    public void Cargar() {
+        //Lector de Txt
+        String fileName = "C:/Users/50242/OneDrive - Universidad del Valle de Guatemala/Cursos/Cuarto Semestre/Algoritmos Y estructura de datos/HT6/HT6/ListadoProducto.txt";   
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] words = line.split("\\|	"); // Se divide la línea por "|"
+                for (String word : words) {
+                    producto.add(word);
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("No se encontro el archivo");
+        }
+
+        //Carga de indices.
+        MuebleDeTerraza.add("Mueble de terraza ");
+        SillonesDeMasaje.add("Sillones de masaje ");
+        Bebidas.add("Bebidas ");
+        Condimentos.add("Condimentos ");
+        Frutas.add("Frutas ");
+        Carnes.add("Carnes ");
+        Lacteos.add("Lacteos ");
+
+        //Carga de valores.
+        for (int i = 0; i < producto.size() ; i++) {
+
+            if (producto.get(i).equals("Mueble de terraza ")) {
+                MuebleDeTerraza.add(producto.get(i+1));
+            }
+
+            if (producto.get(i).equals("Sillones de masaje ")) {
+                SillonesDeMasaje.add(producto.get(i+1));
+            }
+
+            if (producto.get(i).equals("Bebidas ")) {
+                Bebidas.add(producto.get(i+1));
+            }
+
+            if (producto.get(i).equals("Condimentos ")) {
+                Condimentos.add(producto.get(i+1));
+            }
+            
+            if (producto.get(i).equals("Frutas ")) {
+                Frutas.add(producto.get(i+1));
+            }
+
+            if (producto.get(i).equals("Carnes ")) {
+                Carnes.add(producto.get(i+1));
+            }
+
+            if (producto.get(i).equals("Lacteos ")) {
+                Lacteos.add(producto.get(i+1));
+            }
+
+
+
+        }
     }
 }
 
