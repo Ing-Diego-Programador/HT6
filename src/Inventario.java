@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -15,6 +16,7 @@ public class Inventario {
     ArrayList Lacteos = new ArrayList();
 
     public void Cargar() {
+
         //Lector de Txt
         String fileName = "C:/Users/50242/OneDrive - Universidad del Valle de Guatemala/Cursos/Cuarto Semestre/Algoritmos Y estructura de datos/HT6/HT6/ListadoProducto.txt";   
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
@@ -68,9 +70,6 @@ public class Inventario {
             if (producto.get(i).equals("Lacteos ")) {
                 Lacteos.add(producto.get(i+1));
             }
-
-
-
         }
     }
 }
