@@ -1,6 +1,6 @@
 /**
  * Diego Vásquez 211628
- * Cristian
+ * Cristian Guevara 22742
  * Hoja de trabajo 6 - Algoritmos y estructura de datos.
  */
 

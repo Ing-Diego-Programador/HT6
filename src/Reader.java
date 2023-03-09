@@ -1,6 +1,6 @@
 /**
  * Diego Vásquez 211628
- * Cristian
+ * Cristian Guevara 22742
  * Hoja de trabajo 6 - Algoritmos y estructura de datos.
  */
 
@@ -20,7 +20,7 @@ public class Reader {
 
 
     public void cargarDatos(){
-        String fileName = "C:/Users/50242/OneDrive - Universidad del Valle de Guatemala/Cursos/Cuarto Semestre/Algoritmos Y estructura de datos/HT6/HT6/ListadoProducto.txt";   
+        String fileName = "ListadoProducto.txt";   
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
             while ((line = br.readLine()) != null) {
