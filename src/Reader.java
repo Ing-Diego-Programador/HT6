@@ -1,3 +1,9 @@
+/**
+ * Diego Vásquez 211628
+ * Cristian
+ * Hoja de trabajo 6 - Algoritmos y estructura de datos.
+ */
+
 import java.util.ArrayList;
 import java.io.BufferedReader;
 import java.io.FileReader;

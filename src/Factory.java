@@ -1,3 +1,9 @@
+/**
+ * Diego Vásquez 211628
+ * Cristian
+ * Hoja de trabajo 6 - Algoritmos y estructura de datos.
+ */
+
 public class Factory
 {
   //Factory de la implementacion
